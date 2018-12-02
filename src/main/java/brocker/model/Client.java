@@ -17,7 +17,7 @@ public class Client {
     private String contragentName;
     private int operationType; // кол-во заявок
     private String currency;
-    private int amount;
+    private int count;
 
     public Long getId() {
         return id;
@@ -60,11 +60,11 @@ public class Client {
     }
 
     public int getAmount() {
-        return amount;
+        return count;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setCount(int count) {
+        this.count = count;
     }
 
     @Override
@@ -75,7 +75,7 @@ public class Client {
                 ", contragentName='" + contragentName + '\'' +
                 ", operationType=" + operationType +
                 ", currency='" + currency + '\'' +
-                ", amount=" + amount +
+                ", count=" + count +
                 '}';
     }
 }

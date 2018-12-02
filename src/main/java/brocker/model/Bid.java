@@ -14,12 +14,12 @@ public class Bid {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String T24Id; //не уверен что стринг
-    private String name;
+    private String contragentId; //не уверен что стринг
+    private String contragentName;
     private int dealIdB2;
     private int amount;
     private String currency;
-    private boolean operation; //признак операции true - покупка, false - продажа TODO передалать в Enum
+    private int operation; //признак операции true - покупка, false - продажа TODO передалать в Enum
 
     public Long getId() {
         return id;
@@ -29,20 +29,20 @@ public class Bid {
         this.id = id;
     }
 
-    public String getT24Id() {
-        return T24Id;
+    public String getContragentId() {
+        return contragentId;
     }
 
-    public void setT24Id(String t24Id) {
-        T24Id = t24Id;
+    public void setContragentId(String contragentId) {
+        contragentId = contragentId;
     }
 
-    public String getName() {
-        return name;
+    public String getContragentName() {
+        return contragentName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setContragentName(String contragentName) {
+        this.contragentName = contragentName;
     }
 
     public int getDealIdB2() {
@@ -69,11 +69,11 @@ public class Bid {
         this.currency = currency;
     }
 
-    public boolean isOperation() {
+    public int getOperation() {
         return operation;
     }
 
-    public void setOperation(boolean operation) {
+    public void setOperation(int operation) {
         this.operation = operation;
     }
 
@@ -81,8 +81,8 @@ public class Bid {
     public String toString() {
         return "Bid{" +
                 "id=" + id +
-                ", T24Id='" + T24Id + '\'' +
-                ", name='" + name + '\'' +
+                ", T24Id='" + contragentId + '\'' +
+                ", name='" + contragentName + '\'' +
                 ", dealIdB2=" + dealIdB2 +
                 ", amount=" + amount +
                 ", currency='" + currency + '\'' +
