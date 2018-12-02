@@ -13,9 +13,9 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String T24Id;
-    private String name;
-    private int amountBid; // кол-во заявок
+    private String contragentId;
+    private String contragentName;
+    private int operationType; // кол-во заявок
     private String currency;
     private int amount;
 
@@ -27,28 +27,28 @@ public class Client {
         this.id = id;
     }
 
-    public String getT24Id() {
-        return T24Id;
+    public String getcontragentId() {
+        return contragentId;
     }
 
-    public void setT24Id(String t24Id) {
-        T24Id = t24Id;
+    public void setcontragentId(String contragentId) {
+        contragentId = contragentId;
     }
 
-    public String getName() {
-        return name;
+    public String getСontragentName() {
+        return contragentName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setСontragentName(String contragentName) {
+        this.contragentName = contragentName;
     }
 
-    public int getAmountBid() {
-        return amountBid;
+    public int getOperationType() {
+        return operationType;
     }
 
-    public void setAmountBid(int amountBid) {
-        this.amountBid = amountBid;
+    public void setOperationType(int operationType) {
+        this.operationType = operationType;
     }
 
     public String getCurrency() {
@@ -71,9 +71,9 @@ public class Client {
     public String toString() {
         return "Client{" +
                 "id=" + id +
-                ", T24Id='" + T24Id + '\'' +
-                ", name='" + name + '\'' +
-                ", amountBid=" + amountBid +
+                ", contragentId='" + contragentId + '\'' +
+                ", contragentName='" + contragentName + '\'' +
+                ", operationType=" + operationType +
                 ", currency='" + currency + '\'' +
                 ", amount=" + amount +
                 '}';
